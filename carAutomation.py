@@ -15,6 +15,17 @@ class Car:
     def drive(self):
         print("Car is moving")
 
+    def update_fuel_level(self,new_level):
+        if new_level <= self.fuel_capacity:
+            self.fuel_level = new_level
+        else:
+            print("The tank can't hold that much")
+    
+    def add_fuel(self,amount):
+        if(self.fuel_level+amount <= self.fuel_capacity):
+            print("added fuel")
+        else:
+            print("the tank can hold that much")
 
 # Create an instance of Car
 my_car = Car("Tesla", "G3", 2024)
@@ -33,3 +44,6 @@ print(my_car.fuel_level)
 my_car.fuel_tank()           
 print(my_car.fuel_level)     
 my_car.drive()
+my_car.update_fuel_level(12)
+my_car.fuel_level
+my_car.add_fuel(4)
