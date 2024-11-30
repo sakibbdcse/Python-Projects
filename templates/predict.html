@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction Form</title>
+    <!-- Bootstrap CSS (CDN link) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEJt3Wjq2V2Xz2//1+Lp6i/4YjlGQ9+K/5lBpG8lXqg1W+2fh3vo02Gf8YjEz" crossorigin="anonymous">
+    <style>
+        /* Full-page styling */
+        html,
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f0f8ff;
+        }
+
+        /* Center the form vertically and horizontally */
+        .d-flex {
+            min-height: 100vh;
+            /* Full height of viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Card Styling */
+        .card {
+            border-radius: 12px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            overflow: hidden;
+            /* Ensures no overflow from input fields */
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        /* Input styling */
+        .form-control {
+            border-radius: 8px;
+            font-size: 1rem;
+            padding: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Label styling */
+        .form-label {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* Button styling */
+        .btn-primary {
+            background-color: #007bff;
+            border-radius: 10px;
+            padding: 12px;
+            width: 100%;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 18px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Additional styling */
+        .card-body {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .mb-4 {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .bg-gradient {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 576px) {
+            .card {
+                padding: 15px;
+            }
+
+            .form-control {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+
+            .btn-primary {
+                padding: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gradient h-100">
+    <div class="d-flex">
+        <div class="card">
+            <div class="card-header">
+                <h4>Stock Prediction Form</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-4">
+                        <label for="open" class="form-label">Open Price</label>
+                        <input type="number" class="form-control" id="open" placeholder="Enter opening price" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="high" class="form-label">High Price</label>
+                        <input type="number" class="form-control" id="high" placeholder="Enter highest price" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="low" class="form-label">Low Price</label>
+                        <input type="number" class="form-control" id="low" placeholder="Enter lowest price" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="adjclose" class="form-label">Adjusted Close Price</label>
+                        <input type="number" class="form-control" id="adjclose" placeholder="Enter adjusted close price"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="volume" class="form-label">Volume</label>
+                        <input type="number" class="form-control" id="volume" placeholder="Enter stock volume" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="year" class="form-label">Year</label>
+                        <input type="number" class="form-control" id="year" placeholder="Enter year" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="month" class="form-label">Month</label>
+                        <input type="number" class="form-control" id="month" placeholder="Enter month" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="day" class="form-label">Day</label>
+                        <input type="number" class="form-control" id="day" placeholder="Enter day" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (CDN link) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka3T8BcRg0aZ0Cm4XvcPTXLDdYrywwTpGm8T7TZgk5Ulz6F1Wm9Fbsb5h77tbqkn"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
