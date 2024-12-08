@@ -1,0 +1,20 @@
+User: i like to funny
+Bot: I like to funny
+User: None
+Bot: How many?
+User: None
+Bot: How many?
+User: sorry i don't understand please say again
+Bot: How many?
+User: i m fine and u
+Bot: How many?
+User: None
+Bot: How many?
+User: None
+Bot: How many?
+User: None
+Bot: How many?
+User: None
+Bot: How many?
+User: change voice
+Bot: how many?
